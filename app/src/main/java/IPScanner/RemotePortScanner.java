@@ -31,7 +31,6 @@ public class RemotePortScanner extends PortScanner{
                 socket.connect(new InetSocketAddress(address, currentPort), 1000);
                 socket.close();
                 openPorts.add(currentPort);
-                System.out.println("Adres: " + address + " port: " + currentPort);
                 service.wait();
                 sleep(5);
             } catch (Exception ex) {

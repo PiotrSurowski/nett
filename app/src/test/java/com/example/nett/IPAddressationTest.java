@@ -5,6 +5,8 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
+import Addressation.IPAddressation;
+
 class IPAddressationTest {
 
     IPAddressation ip;

@@ -1,5 +1,7 @@
 package IPScanner;
 
+import java.io.IOException;
+import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -23,16 +25,19 @@ public class PortScannerManager extends PortScanner{
         return address.getRange();
     }
 
-    private void runTask() throws InterruptedException {
+    private void runTask() throws InterruptedException, IOException {
         for (String s : addressRange){
             RemotePortScanner rps = new RemotePortScanner(s, startPort, endPort);
-            if (rps.getOpenPorts() != null){
-                results.put(s, rps.getOpenPorts());
+            if(InetAddress.getByName(s).isReachable(500)){
+                System.out.println(s);
+                if (rps.getOpenPorts() != null){
+                    results.put(s, rps.getOpenPorts());
+                }
             }
         }
     }
 
-    public Map<String, List<Integer>> getInetSocketAddresses() throws InterruptedException {
+    public Map<String, List<Integer>> getInetSocketAddresses() throws InterruptedException, IOException {
         runTask();
         return results;
     }

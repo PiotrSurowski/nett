@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Nett</string>
+    <string name="czesc">Cześć!</string>
+    <string name="adresacja_ip">Adresacja IP</string>
+    <string name="home">Home</string>
+    <string name="authors">Authors</string>
 </resources>

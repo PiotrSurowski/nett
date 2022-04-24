@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(),"Skaner portów", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(getApplicationContext(), PortsActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -43,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(),"Skanowanie zdalnego hosta", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(getApplicationContext(), HostsActivity.class);
+                startActivity(intent);
             }
         });
     }

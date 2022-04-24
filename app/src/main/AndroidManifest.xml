@@ -19,6 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".IpActivity"></activity>
+        <activity android:name=".PortsActivity"></activity>
+        <activity android:name=".HostsActivity"></activity>
     </application>
 
 </manifest>

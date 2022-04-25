@@ -2,16 +2,16 @@ package com.example.nett;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.Assert;
 import org.junit.jupiter.api.Test;
+import org.testng.Assert;
 
-import Addressation.IPAddressation;
+import Addressation.IPAddressationService;
 
 class IPAddressationTest {
 
-    IPAddressation ip;
+    IPAddressationService ip;
     IPAddressationTest(){
-        ip = new IPAddressation(192, 168,1,145
+        ip = new IPAddressationService(192, 168,1,145
                 ,255,255,255,128);
     }
 

@@ -4,4 +4,5 @@
     <string name="adresacja_ip">Adresacja IP</string>
     <string name="home">Home</string>
     <string name="authors">Authors</string>
+    <string name="polecenie">Wpisz IP</string>
 </resources>

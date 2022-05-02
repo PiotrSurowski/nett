@@ -4,6 +4,7 @@ import android.content.Context;
 
 import java.io.IOException;
 import java.net.InetAddress;
+import java.net.Socket;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -16,7 +17,7 @@ public class LocalPortScanner extends PortScanner{
     private final Map<String, List<Integer>> results;
 
 
-    public LocalPortScanner(Integer startPort, Integer endPort) throws UnknownHostException {
+    public LocalPortScanner(Integer startPort, Integer endPort) throws IOException {
         super(startPort, endPort);
         address = new Address();
         results = new HashMap<>();
@@ -38,7 +39,6 @@ public class LocalPortScanner extends PortScanner{
                     results.put(s, rps.getOpenPorts());
                 }
             }
-
             counter++;
         }
     }

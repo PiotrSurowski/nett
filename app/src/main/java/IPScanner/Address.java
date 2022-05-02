@@ -1,15 +1,20 @@
 package IPScanner;
 
+import java.io.IOException;
 import java.net.InetAddress;
+import java.net.Socket;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Address {
     private final String localAddress;
+    private Socket socket;
 
-    public Address() throws UnknownHostException {
-        this.localAddress = InetAddress.getLocalHost().getHostAddress();
+    public Address() throws IOException {
+        //this.localAddress = InetAddress.getLocalHost().getHostAddress();
+        socket = new Socket("192.168.1.1", 80);
+        localAddress = socket.getLocalAddress().getHostAddress();
     }
 
     protected String splitAddress(){

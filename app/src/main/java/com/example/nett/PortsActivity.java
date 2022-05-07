@@ -50,8 +50,9 @@ public class PortsActivity extends Activity {
 
                     for (String s : result.keySet()){
                         sb.append(s)
-                                .append(" ")
-                                .append(result.get(s));
+                                .append(": ")
+                                .append(result.get(s))
+                                .append("\n");
                     }
 
                 } catch (UnknownHostException e) {

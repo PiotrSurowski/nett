@@ -1,11 +1,7 @@
 package IPScanner;
 
-import android.content.Context;
-
 import java.io.IOException;
 import java.net.InetAddress;
-import java.net.Socket;
-import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -28,8 +24,7 @@ public class LocalPortScanner extends PortScanner{
         return address.getRange();
     }
 
-    private void runTask() throws InterruptedException, IOException {
-        float counter = 0;
+    private void runTask() throws IOException {
         for (String s : addressRange){
             RemotePortScanner rps = new RemotePortScanner(s, startPort, endPort);
 

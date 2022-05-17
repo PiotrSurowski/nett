@@ -9,6 +9,8 @@ import java.util.concurrent.Executors;
 
 import static java.lang.Thread.sleep;
 
+import android.content.Context;
+
 public class RemotePortScanner extends PortScanner{
     private ExecutorService service;
     private List<Integer> openPorts;
@@ -21,6 +23,7 @@ public class RemotePortScanner extends PortScanner{
 
     public List<Integer> getOpenPorts() {
         runTask();
+        while(!service.isTerminated()){}
         return openPorts;
     }
 

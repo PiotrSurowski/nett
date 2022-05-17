@@ -10,7 +10,9 @@
         <entry key="..\:/Users/pauli/AndroidStudioProjects/nett/app/src/main/res/menu/navigation_menu.xml" value="0.25" />
         <entry key="..\:/Users/pio_t/AndroidStudioProjects/nett/app/src/main/res/layout/activity_main.xml" value="0.17300724637681159" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/hosts_layout.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/ip_layout.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/ports_layout.xml" value="0.2536231884057971" />
       </map>
     </option>
   </component>

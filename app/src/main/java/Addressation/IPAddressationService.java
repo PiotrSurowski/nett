@@ -113,7 +113,12 @@ public class IPAddressationService {
         for (String s : binaryMask){
             sb.setLength(0);
             for (int i = 0; i < s.length(); i++){
-                sb.append(s.charAt(i));
+                if (s.charAt(i)=='1'){
+                    sb.append('0');
+                } else{
+                    sb.append('1');
+                }
+
             }
             invertedBinaryMask.add(sb.toString());
         }
@@ -143,6 +148,10 @@ public class IPAddressationService {
         }
         hostMax = Math.pow(2, (amountAddressBits - shortenedMask));
         hostMax -= 2;
+    }
+
+    public IPAddressation getInstance(){
+        return new IPAddressation(address, mask, networkAddress, broadcastAddress);
     }
     
     public List<Integer> getAddress() {

@@ -198,6 +198,7 @@
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:itemIconTint="@color/white"
         app:backgroundTint="@color/colorbg"
         app:itemIconSize="40dp"
         app:labelVisibilityMode="unlabeled"

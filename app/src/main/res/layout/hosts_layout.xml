@@ -19,7 +19,7 @@
             android:id="@+id/textSkanowanieHosta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
             android:text="SKANOWANIE ZDALNEGO HOSTA"
             android:textColor="@color/white"

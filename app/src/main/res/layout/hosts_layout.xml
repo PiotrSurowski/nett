@@ -64,7 +64,7 @@
             android:layout_marginRight="5dp"
             android:id="@+id/label3"
             android:paddingTop="15dp"
-            app:helperText="Text"
+            app:helperText="URL"
             app:endIconMode="clear_text"
             app:helperTextTextColor="@color/colorbg"
             app:layout_constraintStart_toStartOf="parent"
@@ -95,7 +95,7 @@
             android:layout_marginRight="5dp"
             android:id="@+id/label1"
             android:paddingTop="15dp"
-            app:helperText="Text"
+            app:helperText="Host"
             app:endIconMode="clear_text"
             app:helperTextTextColor="@color/colorbg"
             app:layout_constraintStart_toStartOf="parent"
@@ -120,7 +120,7 @@
             android:layout_marginRight="5dp"
             android:id="@+id/label2"
             android:paddingTop="15dp"
-            app:helperText="Text"
+            app:helperText="Host"
             app:endIconMode="clear_text"
             app:helperTextTextColor="@color/colorbg"
             app:layout_constraintStart_toStartOf="parent"
@@ -146,7 +146,8 @@
         android:id="@+id/textview2"
         android:paddingTop="30dp"
         android:layout_width="match_parent"
-        android:text="text"
+        android:text="Wynik skanowania:"
+        android:textSize="20dp"
         android:layout_height="200dp">
     </TextView>
 

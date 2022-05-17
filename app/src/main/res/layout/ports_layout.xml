@@ -118,7 +118,8 @@
         android:paddingTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="350dp"
-        android:text="Lista portów: ">
+        android:text="Lista portów: "
+        android:textSize="20dp">
     </TextView>
 
     <Button

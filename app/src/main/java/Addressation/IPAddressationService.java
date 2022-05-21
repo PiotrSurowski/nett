@@ -90,11 +90,6 @@ public class IPAddressationService {
         for (Integer i : mask){
             binaryMask.add(String.format("%8s",Integer.toBinaryString(i)).replaceAll(" ", "0"));
         }
-        System.out.println("binaryMask: " + binaryMask.size());
-        System.out.println(binaryMask.get(0));
-        System.out.println(binaryMask.get(1));
-        System.out.println(binaryMask.get(2));
-        System.out.println(binaryMask.get(3));
     }
 
     public void setNetworkAddress(){

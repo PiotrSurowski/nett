@@ -29,7 +29,6 @@ public class LocalPortScanner extends PortScanner{
             RemotePortScanner rps = new RemotePortScanner(s, startPort, endPort);
 
             if(InetAddress.getByName(s).isReachable(500)){
-                System.out.println(s);
                 if (rps.getOpenPorts() != null){
                     results.put(s, rps.getOpenPorts());
                 }

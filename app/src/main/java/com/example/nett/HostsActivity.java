@@ -43,29 +43,26 @@ public class HostsActivity extends AppCompatActivity {
         progressDialog = new ProgressDialog(this);
 
 
-        scanButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showProgressDialogWithTitle("Proszę czekać");
-                new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        String address = inputAddress.getText().toString();
-                        Integer portStart = Integer.valueOf(portStartBox.getText().toString());
-                        Integer portEnd = Integer.valueOf(portEndBox.getText().toString());
-                        portScanner = new RemotePortScanner(address, portStart,portEnd);
-                        List<Integer> result = new ArrayList<>(portScanner.getOpenPorts());
-                        StringBuilder sb = new StringBuilder();
+        scanButton.setOnClickListener(view -> {
+            showProgressDialogWithTitle("Proszę czekać");
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    String address = inputAddress.getText().toString();
+                    Integer portStart = Integer.valueOf(portStartBox.getText().toString());
+                    Integer portEnd = Integer.valueOf(portEndBox.getText().toString());
+                    portScanner = new RemotePortScanner(address, portStart,portEnd);
+                    List<Integer> result = new ArrayList<>(portScanner.getOpenPorts());
+                    StringBuilder sb = new StringBuilder();
 
-                        for (Integer i : result){
-                            sb.append(String.valueOf(i))
-                                    .append("\n");
-                        }
-                        hideProgressDialogWithTitle();
-                        resultBox.setText(sb.toString());
+                    for (Integer i : result){
+                        sb.append(String.valueOf(i))
+                                .append("\n");
                     }
-                }).start();
-            }
+                    hideProgressDialogWithTitle();
+                    resultBox.setText(sb.toString());
+                }
+            }).start();
         });
 
         clearButton.setOnClickListener(new View.OnClickListener() {
